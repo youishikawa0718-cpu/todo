@@ -3,6 +3,7 @@ services:
     name: todo-app
     env: docker
     dockerfilePath: ./Dockerfile
+    plan: free
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
@@ -12,3 +13,4 @@ databases:
   - name: todo-db
     databaseName: todo
     user: todo_user
+    plan: free
