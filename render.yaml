@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: todo-app
+    runtime: java
+    buildCommand: ./gradlew clean build -x test
+    startCommand: java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar build/libs/*.jar
+    envVars:
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+    healthCheckPath: /
+
+databases:
+  - name: todo-db
+    databaseName: todo
+    user: todo_user
