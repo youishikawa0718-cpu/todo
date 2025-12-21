@@ -7,6 +7,12 @@ services:
     envVars:
       - key: SPRING_PROFILES_ACTIVE
         value: prod
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: todo-db
+          property: connectionString
+      - key: PORT
+        value: 10000
     healthCheckPath: /
 
 databases:
