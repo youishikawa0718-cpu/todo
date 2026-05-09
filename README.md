@@ -1,7 +1,7 @@
 # TODOタスク管理アプリケーション
 
 Spring Bootで構築されたシンプルなTODOタスク管理Webアプリケーションです。
-https://todo-app-wbt7.onrender.com）
+https://todo-app-wbt7.onrender.com
 
 ## 機能
 
